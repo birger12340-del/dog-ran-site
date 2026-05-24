@@ -1,578 +1,1240 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>דוג רן - Dog Ran | מספרת כלבים וחתולים בנס ציונה</title>
-    <meta name="description" content="מספרת הטיפוח המקצועית של ליקה בנס ציונה. תספורות, רחצה, וטיפול מסור וסבלני לכלבים וחתולים. חניה בשפע ובחינם במרכז המסחרי!">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        sage: {
-                            50: '#f4f7f5',
-                            100: '#e5ebe6',
-                            600: '#607c68',
-                            700: '#4d6553',
-                            800: '#3e5243',
-                        },
-                        gold: '#c5a059',
-                    },
-                    fontFamily: {
-                        sans: ['Rubik', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="דוג רן – מספרת בוטיק לכלבים וחתולים בנס ציונה. טיפוח מקצועי, יחס חם, מחירים הוגנים. שאול המלך 7, מרכז מסחרי עם חניה בשפע ובחינם. תאמו תור: 054-8321588 או 054-5896560" />
+  <meta name="keywords" content="מספרת כלבים נס ציונה, מספרת חתולים, טיפוח כלבים, גרומינג נס ציונה, דוג רן, ליקה, מספרה מוסמכת" />
+  
+  <!-- Open Graph / Social Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.dogran.co.il/" />
+  <meta property="og:title" content="דוג רן | מספרת בוטיק לכלבים וחתולים – נס ציונה" />
+  <meta property="og:description" content="טיפוח פרימיום לחיות המחמד שלכם. ליקה – מומחית לכלבים וחתולים עם סבלנות אינסופית. שאול המלך 7, נס ציונה." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&q=80&w=1200" />
+  
+  <meta name="theme-color" content="#4f8c7e" />
+  <title>דוג רן | מספרת בוטיק לכלבים וחתולים – נס ציונה</title>
 
-    <!-- CSS Custom Animations -->
-    <style>
-        html { scroll-behavior: smooth; }
-        .glass-header {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-    </style>
+  <!-- Google Fonts – All 7 weights for Rubik -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-    <!-- Local Business SEO Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "GroomingSalon",
-      "name": "דוג רן - מספרת כלבים וחתולים",
-      "image": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&q=80&w=1200",
-      "telephone": "054-8321588",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "נס ציונה",
-        "addressCountry": "IL",
-        "description": "חניה בשפע ובחינם במרכז המסחרי"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "31.9292",
-        "longitude": "34.8028"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.2",
-        "reviewCount": "24"
-      },
-      "priceRange": "₪"
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { rubik: ['Rubik', 'sans-serif'] },
+          colors: {
+            sage: { 
+              50:'#f4f8f6', 100:'#e2ece9', 200:'#c6dbd5', 300:'#a0c4ba', 
+              400:'#73a89b', 500:'#4f8c7e', 600:'#3c7066', 700:'#305a52', 
+              800:'#274844', 900:'#1e3935' 
+            },
+            gold: { 
+              100:'#fdf3d0', 300:'#f0d080', 400:'#e8c04a', 
+              500:'#d4a820', 600:'#b88d10' 
+            },
+            charcoal: '#2c3e35',
+          }
+        }
+      }
     }
-    </script>
-</head>
-<body class="bg-sage-50 text-slate-800 font-sans selection:bg-sage-600 selection:text-white">
+  </script>
 
-    <!-- נדל"ן עליון - הצהרת חניה מובלטת -->
-    <div class="bg-sage-700 text-white text-center text-xs sm:text-sm py-2 px-4 font-medium tracking-wide">
-        <i class="fa-solid fa-square-p text-gold ml-2 animate-pulse"></i> 
-        מגיעים אלינו בקלות! <strong>חניה בשפע ובחינם</strong> במרכז המסחרי לכל אורך שעות הפעילות
+  <!-- Comprehensive JSON-LD Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "דוג רן – מספרת בוטיק לכלבים וחתולים",
+    "alternateName": "Dog Ran Grooming Salon",
+    "description": "מספרת בוטיק מקצועית לכלבים וחתולים בנס ציונה. תספורות גזע, ספא, ניקוי אוזניים וציפורניים, עם ליקה – מומחית עם 10+ שנות ניסיון.",
+    "url": "https://dogran.co.il",
+    "image": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&q=80&w=1200",
+    "telephone": ["054-8321588", "054-5896560"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "שאול המלך 7",
+      "addressLocality": "נס ציונה",
+      "addressRegion": "מרכז",
+      "postalCode": "7401607",
+      "addressCountry": "IL"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 31.9264,
+      "longitude": 34.7986
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Friday",
+        "opens": "08:00",
+        "closes": "15:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "00:00",
+        "closes": "00:00",
+        "scheduledTime": "Closed"
+      }
+    ],
+    "priceRange": "₪₪",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.2",
+      "reviewCount": "30",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "חניה חינמית בשפע",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "נגיש לנכים",
+        "value": true
+      }
+    ],
+    "sameAs": [
+      "https://wa.me/972548321588"
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { font-family: 'Rubik', sans-serif; box-sizing: border-box; }
+    html  { scroll-behavior: smooth; }
+    body  { background: #f4f8f6; color: #2c3e35; overflow-x: hidden; }
+
+    /* Glass header with scroll effect */
+    .glass-header {
+      background: rgba(244, 248, 246, 0.90);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(115, 168, 155, 0.18);
+      transition: box-shadow 0.3s;
+    }
+    .glass-header.scrolled { 
+      box-shadow: 0 4px 32px -4px rgba(44, 62, 53, 0.12); 
+    }
+
+    /* Reveal animation for scroll-in elements */
+    .reveal { 
+      opacity: 0; 
+      transform: translateY(22px); 
+      transition: opacity 0.65s ease, transform 0.65s ease; 
+    }
+    .reveal.in { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+
+    /* Hero section background */
+    .hero-wrap { 
+      background: linear-gradient(145deg, #dff0ec 0%, #f4f8f6 55%, #fdf8ee 100%); 
+      position: relative; 
+      overflow: hidden; 
+    }
+    .hero-wrap::before {
+      content: '';
+      position: absolute; 
+      top: -120px; 
+      left: -120px;
+      width: 500px; 
+      height: 500px;
+      background: radial-gradient(circle, rgba(115, 168, 155, 0.20) 0%, transparent 68%);
+      border-radius: 50%; 
+      pointer-events: none;
+    }
+    .hero-wrap::after {
+      content: '';
+      position: absolute; 
+      bottom: -80px; 
+      right: -60px;
+      width: 380px; 
+      height: 380px;
+      background: radial-gradient(circle, rgba(212, 168, 32, 0.13) 0%, transparent 68%);
+      border-radius: 50%; 
+      pointer-events: none;
+    }
+
+    .hero-img-frame {
+      border-radius: 32px 8px 32px 8px;
+      overflow: hidden;
+      box-shadow: 0 30px 72px -12px rgba(44, 62, 53, 0.24), 0 0 0 3px rgba(115, 168, 155, 0.28);
+      position: relative;
+    }
+    .hero-img-frame img { 
+      display: block; 
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; 
+      align-items: center; 
+      justify-content: center; 
+      gap: 8px;
+      border-radius: 14px; 
+      font-weight: 700; 
+      font-size: 1rem;
+      padding: 14px 24px; 
+      transition: transform 0.25s, box-shadow 0.25s;
+      cursor: pointer; 
+      border: none; 
+      text-decoration: none;
+    }
+    .btn:hover { 
+      transform: translateY(-2px); 
+    }
+    .btn-wa { 
+      background: linear-gradient(135deg, #25d366, #128c4e); 
+      color: #fff; 
+      box-shadow: 0 8px 28px -4px rgba(37, 211, 102, 0.42); 
+    }
+    .btn-wa:hover { 
+      box-shadow: 0 14px 36px -4px rgba(37, 211, 102, 0.55); 
+    }
+    .btn-tel { 
+      background: linear-gradient(135deg, #73a89b, #4f8c7e); 
+      color: #fff; 
+      box-shadow: 0 8px 28px -4px rgba(79, 140, 126, 0.4); 
+    }
+    .btn-tel:hover { 
+      box-shadow: 0 14px 36px -4px rgba(79, 140, 126, 0.52); 
+    }
+    .btn-gold { 
+      background: linear-gradient(135deg, #e8c04a, #d4a820); 
+      color: #2c3e35; 
+      box-shadow: 0 8px 28px -4px rgba(212, 168, 32, 0.38); 
+    }
+    .btn-gold:hover { 
+      box-shadow: 0 14px 36px -4px rgba(212, 168, 32, 0.52); 
+    }
+    .btn-full { 
+      width: 100%; 
+    }
+
+    /* Cards with hover effects */
+    .card {
+      background: #fff; 
+      border: 1.5px solid rgba(160, 196, 186, 0.28);
+      border-radius: 20px;
+      transition: transform 0.32s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.32s, border-color 0.32s;
+    }
+    .card:hover { 
+      transform: translateY(-6px); 
+      box-shadow: 0 24px 52px -8px rgba(44, 62, 53, 0.14); 
+      border-color: rgba(115, 168, 155, 0.48); 
+    }
+
+    /* Star ratings */
+    .star-full { 
+      color: #e8c04a; 
+    }
+    .star-half {
+      position: relative; 
+      display: inline-block; 
+      color: #e0e0d0;
+    }
+    .star-half::after {
+      content: '★'; 
+      position: absolute; 
+      top: 0; 
+      right: 0;
+      width: 50%; 
+      overflow: hidden; 
+      color: #e8c04a;
+      left: 0; 
+      width: 50%; 
+      overflow: hidden; 
+      direction: ltr;
+    }
+    .star-empty { 
+      color: #d8ddd8; 
+    }
+
+    /* Before/After cards */
+    .ba-card { 
+      border-radius: 24px; 
+      overflow: hidden; 
+      background: #fff; 
+      border: 1.5px solid rgba(160, 196, 186, 0.28); 
+      transition: transform 0.32s, box-shadow 0.32s; 
+    }
+    .ba-card:hover { 
+      transform: translateY(-5px); 
+      box-shadow: 0 20px 48px -8px rgba(44, 62, 53, 0.16); 
+    }
+    .ba-label {
+      position: absolute; 
+      bottom: 10px; 
+      right: 10px;
+      background: rgba(44, 62, 53, 0.75); 
+      backdrop-filter: blur(6px);
+      border-radius: 8px; 
+      padding: 4px 10px;
+      color: #fff; 
+      font-size: 11px; 
+      font-weight: 700; 
+      letter-spacing: .5px;
+    }
+
+    /* Form inputs & validation */
+    .f-input {
+      width: 100%; 
+      padding: 13px 16px; 
+      border-radius: 12px;
+      border: 1.5px solid rgba(160, 196, 186, 0.42); 
+      background: #fff;
+      font-size: 16px; 
+      color: #2c3e35; 
+      outline: none;
+      transition: border-color 0.22s, box-shadow 0.22s;
+      font-family: 'Rubik', sans-serif;
+    }
+    .f-input:focus { 
+      border-color: #73a89b; 
+      box-shadow: 0 0 0 3px rgba(115, 168, 155, 0.18); 
+    }
+    .f-input::placeholder { 
+      color: #aac2bc; 
+    }
+    .f-input.error { 
+      border-color: #e05c5c !important; 
+      box-shadow: 0 0 0 3px rgba(224, 92, 92, 0.14) !important; 
+    }
+    .f-label { 
+      display: block; 
+      font-size: 13.5px; 
+      font-weight: 600; 
+      color: #3c7066; 
+      margin-bottom: 6px; 
+    }
+    .f-error { 
+      font-size: 12px; 
+      color: #e05c5c; 
+      margin-top: 4px; 
+      display: none; 
+    }
+    .f-error.show { 
+      display: block; 
+    }
+
+    /* Badge pills */
+    .pill {
+      display: inline-flex; 
+      align-items: center; 
+      gap: 6px;
+      background: rgba(115, 168, 155, 0.12); 
+      border: 1px solid rgba(115, 168, 155, 0.3);
+      border-radius: 999px; 
+      padding: 6px 14px; 
+      font-size: 12.5px;
+      font-weight: 500; 
+      color: #3c7066;
+    }
+
+    /* Section divider */
+    .sec-divider { 
+      height: 1.5px; 
+      background: linear-gradient(90deg, transparent, rgba(115, 168, 155, 0.35), rgba(212, 168, 32, 0.25), transparent); 
+    }
+
+    /* Bottom sticky bar (mobile only) */
+    .bottom-bar {
+      background: rgba(30, 57, 53, 0.97);
+      backdrop-filter: blur(14px); 
+      -webkit-backdrop-filter: blur(14px);
+      border-top: 1px solid rgba(115, 168, 155, 0.18);
+    }
+
+    /* Safe area handling for notched devices */
+    .safe-bottom {
+      padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+    }
+
+    /* Paw background pattern */
+    .paw-bg {
+      background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='14' r='4.5' fill='%234f8c7e' opacity='.055'/%3E%3Ccircle cx='32' cy='9' r='3.5' fill='%234f8c7e' opacity='.055'/%3E%3Ccircle cx='44' cy='14' r='4.5' fill='%234f8c7e' opacity='.055'/%3E%3Cellipse cx='32' cy='30' rx='10' ry='12' fill='%234f8c7e' opacity='.055'/%3E%3C/svg%3E");
+    }
+
+    /* Icon boxes */
+    .icon-box {
+      width: 48px; 
+      height: 48px; 
+      border-radius: 16px; 
+      flex-shrink: 0;
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+    }
+
+    /* Parking badge */
+    .parking-badge {
+      display: inline-flex; 
+      align-items: center; 
+      gap: 6px;
+      background: rgba(212, 168, 32, 0.12); 
+      border: 1px solid rgba(212, 168, 32, 0.35);
+      border-radius: 999px; 
+      padding: 5px 12px;
+      font-size: 12px; 
+      font-weight: 600; 
+      color: #b88d10;
+    }
+
+    /* Responsive utilities */
+    @media (max-width: 767px) {
+      .hide-sm { 
+        display: none !important; 
+      }
+      body { 
+        padding-bottom: 88px; 
+      }
+    }
+    @media (min-width: 768px) {
+      .show-sm-only { 
+        display: none !important; 
+      }
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { 
+      width: 5px; 
+    }
+    ::-webkit-scrollbar-track { 
+      background: #f4f8f6; 
+    }
+    ::-webkit-scrollbar-thumb { 
+      background: #a0c4ba; 
+      border-radius: 3px; 
+    }
+  </style>
+
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PARKING ANNOUNCEMENT BAR
+════════════════════════════════════════════════════════════ -->
+<div class="bg-sage-800 text-white text-center text-xs sm:text-sm py-2.5 px-4 font-bold tracking-wide border-b border-sage-700">
+  <i class="fa-solid fa-square-p text-gold mr-2 animate-pulse"></i> 
+  מגיעים בראש שקט! חניה בשפע ובחינם במרכז המסחרי לכל אורך הטיפול
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     STICKY HEADER
+════════════════════════════════════════════════════════════ -->
+<header class="glass-header fixed top-0 right-0 left-0 z-50" id="hdr">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- Logo -->
+      <a href="#hero" class="flex items-center gap-2.5 no-underline group">
+        <div class="icon-box" style="background: linear-gradient(135deg, #73a89b, #3c7066); width: 38px; height: 38px; border-radius: 12px; group-hover:scale-105 transition-transform">
+          <i class="fa-solid fa-paw text-white text-lg"></i>
+        </div>
+        <div>
+          <div class="font-black text-sm leading-tight" style="color: #2c3e35;">דוג רן</div>
+          <div class="text-xs font-medium" style="color: #73a89b;">מספרת בוטיק · נס ציונה</div>
+        </div>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hide-sm flex items-center gap-7 text-sm font-semibold" style="color: #4f8c7e;">
+        <a href="#services" class="hover:text-sage-700 transition-colors">שירותים</a>
+        <a href="#makeover" class="hover:text-sage-700 transition-colors">מהפכים</a>
+        <a href="#reviews" class="hover:text-sage-700 transition-colors">ביקורות</a>
+        <a href="#contact" class="hover:text-sage-700 transition-colors">יצירת קשר</a>
+      </nav>
+
+      <!-- Header CTA -->
+      <a href="https://wa.me/972548321588" target="_blank" rel="noopener"
+         class="btn btn-wa" style="padding: 10px 18px; font-size: 14px; border-radius: 12px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+        <span class="hide-sm">קביעת תור</span>
+        <span class="show-sm-only">ווצאפ</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO SECTION
+════════════════════════════════════════════════════════════ -->
+<section class="hero-wrap pt-20 sm:pt-28 pb-16 sm:pb-24" id="hero">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+
+      <!-- TEXT -->
+      <div class="flex-1 text-center lg:text-right reveal">
+
+        <div class="flex flex-wrap justify-center lg:justify-start gap-2 mb-5">
+          <span class="pill">
+            <i class="fa-solid fa-star"></i>
+            מספרת בוטיק פרימיום
+          </span>
+          <span class="parking-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg>
+            חניה בשפע ובחינם!
+          </span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-[2.75rem] font-black leading-tight mb-4" style="color: #2c3e35; letter-spacing: -0.4px;">
+          דוג רן –<br/>
+          <span style="background: linear-gradient(135deg, #4f8c7e, #73a89b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">טיפוח פרימיום</span><br/>
+          לחבר הכי טוב שלך<br/>
+          <span class="text-2xl sm:text-3xl font-bold" style="color: #5a7a6e;">בנס ציונה</span>
+        </h1>
+
+        <p class="text-base sm:text-lg font-medium leading-relaxed mb-2 max-w-lg mx-auto lg:mx-0" style="color: #5a7a6e;">
+          מספרת כלבים וחתולים מקצועית לכל סוגי הגזעים.<br/>
+          <strong style="color: #3c7066;">ליקה</strong> – מומחית לכלבים <em>ולחתולים</em>, עם סבלנות אינסופית, יחס חם ואוהב, ו<strong>10+ שנות ניסיון</strong>.
+        </p>
+        <p class="text-sm font-medium mb-8 max-w-lg mx-auto lg:mx-0" style="color: #7a9e96;">
+          מחירים הוגנים · מרכז מסחרי שאול המלך 7 · חניה בשפע ובחינם
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+          <a href="https://wa.me/972548321588" target="_blank" rel="noopener" class="btn btn-wa text-base">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+            קביעת תור בוואטסאפ
+          </a>
+          <a href="tel:054-8321588" class="btn btn-tel text-base">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.26h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            חייגו אלינו
+          </a>
+        </div>
+
+        <!-- Trust signals -->
+        <div class="flex items-center justify-center lg:justify-start gap-5 mt-8 flex-wrap">
+          <div class="text-center">
+            <div class="text-xl font-black" style="color: #4f8c7e;">10+</div>
+            <div class="text-xs font-semibold" style="color: #7a9e96;">שנות ניסיון</div>
+          </div>
+          <div class="w-px h-9" style="background: rgba(115, 168, 155, 0.3);"></div>
+          <div class="text-center">
+            <div class="flex items-center gap-0.5 justify-center">
+              <span class="star-full text-lg">★</span>
+              <span class="star-full text-lg">★</span>
+              <span class="star-full text-lg">★</span>
+              <span class="star-full text-lg">★</span>
+              <span class="star-empty text-lg" style="color: #d0cfc4;">★</span>
+            </div>
+            <div class="text-xs font-semibold mt-0.5" style="color: #7a9e96;">דירוג 4.2 בגוגל</div>
+          </div>
+          <div class="w-px h-9" style="background: rgba(115, 168, 155, 0.3);"></div>
+          <div class="text-center">
+            <div class="text-xl font-black" style="color: #d4a820;">
+              <i class="fa-solid fa-square-p"></i>
+              חינם
+            </div>
+            <div class="text-xs font-semibold" style="color: #7a9e96;">חניה במגרש</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- IMAGE -->
+      <div class="flex-1 w-full max-w-[420px] lg:max-w-none mx-auto reveal" style="transition-delay: 0.2s;">
+        <div class="hero-img-frame" style="max-width: 460px; margin: 0 auto; height: 340px;">
+          <img
+            src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=920&q=82&auto=format&fit=crop&crop=center"
+            alt="כלב גולדן רטריבר מטופח ומאושר – דוג רן מספרת בוטיק נס ציונה"
+            style="width: 100%; height: 100%; object-fit: cover;"
+            loading="eager"
+          />
+          <!-- Floating badge -->
+          <div class="absolute bottom-4 right-4 bg-white rounded-2xl px-4 py-2.5 shadow-xl flex items-center gap-3" style="min-width: 170px;">
+            <div class="icon-box" style="background: linear-gradient(135deg, #73a89b, #3c7066); width: 38px; height: 38px; border-radius: 12px;">
+              <i class="fa-solid fa-shield text-white text-lg"></i>
+            </div>
+            <div>
+              <div class="text-xs font-black" style="color: #2c3e35;">מספרה מוסמכת</div>
+              <div class="text-xs font-medium" style="color: #73a89b;">טיפול בטוח ואוהב</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sec-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SERVICES
+════════════════════════════════════════════════════════════ -->
+<section class="py-16 sm:py-24 paw-bg" id="services">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-12 reveal">
+      <span class="pill mb-4 inline-flex">
+        <i class="fa-solid fa-clock"></i>
+        מה כולל הטיפול
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-black mb-3" style="color: #2c3e35;">השירותים המפנקים שלנו</h2>
+      <p class="text-base font-medium max-w-xl mx-auto" style="color: #5a7a6e;">
+        ליקה מתמחה בכלבים וחתולים מכל הגזעים – עם סבלנות אינסופית וידיים מקצועיות
+      </p>
     </div>
 
-    <!-- ניווט עליון קבוע -->
-    <header class="sticky top-0 z-50 glass-header border-b border-sage-100 transition-all duration-300">
-        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-            <!-- לוגו ומותג -->
-            <a href="#" class="flex items-center gap-2 group">
-                <div class="w-10 h-10 bg-sage-600 rounded-full flex items-center justify-center text-white text-xl shadow-md group-hover:scale-105 transition-transform">
-                    <i class="fa-solid fa-paw"></i>
-                </div>
-                <div>
-                    <span class="text-xl font-black text-sage-800 tracking-tight block">דוג רן</span>
-                    <span class="text-xs font-medium text-gold block -mt-1">מספרת כלבים & חתולים</span>
-                </div>
-            </a>
-            
-            <!-- כפתור מהיר לחיוג/ווטסאפ במובייל ובדסקטופ -->
-            <div class="flex items-center gap-2">
-                <a href="tel:0548321588" class="bg-white hover:bg-sage-100 text-sage-700 border border-sage-600/30 font-bold p-2.5 rounded-full sm:rounded-xl sm:px-4 sm:py-2 text-sm flex items-center gap-2 transition-all shadow-sm">
-                    <i class="fa-solid fa-phone text-sage-600"></i>
-                    <span class="hidden sm:inline">חיוג מהיר</span>
-                </a>
-                <a href="#book-appointment" class="bg-sage-600 hover:bg-sage-700 text-white font-bold p-2.5 rounded-full sm:rounded-xl sm:px-5 sm:py-2 text-sm flex items-center gap-2 transition-all shadow-md shadow-sage-600/20">
-                    <i class="fa-brands fa-whatsapp text-lg"></i>
-                    <span class="hidden sm:inline">תיאום תור מהיר</span>
-                </a>
-            </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <!-- Service 1 -->
+      <div class="card p-6 reveal" style="transition-delay: .08s;">
+        <div class="icon-box mb-4" style="background: linear-gradient(135deg, rgba(115,168,155,.18), rgba(79,140,126,.1));">
+          <i class="fa-solid fa-scissors text-2xl text-sage-600"></i>
         </div>
-    </header>
+        <h3 class="font-bold text-base mb-1.5" style="color: #2c3e35;">תספורות גזע אופנתיות</h3>
+        <p class="text-sm leading-relaxed" style="color: #6a8a80;">תספורות מותאמות אישית לכל גזע, עיצוב מדויק שמכבד את הטבע הטבעי של כל חיה.</p>
+      </div>
 
-    <!-- אזור Hero ראשי -->
-    <section class="relative bg-gradient-to-b from-white to-sage-50/50 pt-10 pb-16 overflow-hidden">
-        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <!-- תוכן שיווקי -->
-            <div class="lg:col-span-7 space-y-6 text-center lg:text-right">
-                <div class="inline-flex items-center gap-2 bg-sage-100 border border-sage-600/10 text-sage-700 text-xs sm:text-sm px-3 py-1.5 rounded-full font-medium">
-                    <i class="fa-solid fa-star text-gold"></i>
-                    <span>המספרה המובילה בנס ציונה והסביבה</span>
-                </div>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-sage-800 leading-tight">
-                    החבר הכי טוב שלך מגיע לטיפול <span class="text-sage-600 underline decoration-gold decoration-4 underline-offset-4">מכל הלב</span>
-                </h1>
-                <p class="text-base sm:text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                    במספרת <strong>דוג רן</strong> בהנהלת ליקה, אנו מתמחים בטיפוח מקצועי, מסור וסבלני של <strong>כלבים וחתולים כאחד</strong>. אצלנו כל חיה מקבלת יחס אישי, רגוע וללא שום לחץ, עם דגש על היגיינה, בריאות הפרווה וחוויה מפנקת במיוחד.
-                </p>
-                
-                <!-- יתרונות מהירים -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-lg mx-auto lg:mx-0 pt-2 text-right">
-                    <div class="flex items-center gap-3 bg-white p-3 rounded-xl border border-sage-100 shadow-sm">
-                        <i class="fa-solid fa-circle-check text-sage-600 text-lg shrink-0"></i>
-                        <span class="text-sm font-medium text-slate-700">התמחות וגישה מיוחדת לחתולים</span>
-                    </div>
-                    <div class="flex items-center gap-3 bg-white p-3 rounded-xl border border-sage-100 shadow-sm">
-                        <i class="fa-solid fa-square-p text-gold text-lg shrink-0"></i>
-                        <span class="text-sm font-medium text-slate-700">חניה חינם ובשפע במרכז המסחרי</span>
-                    </div>
-                </div>
-
-                <!-- הנעה לפעולה -->
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-                    <a href="#book-appointment" class="bg-sage-600 hover:bg-sage-700 text-white font-bold px-8 py-4 rounded-xl text-lg flex items-center justify-center gap-3 transition-all shadow-lg shadow-sage-600/30 transform hover:-translate-y-0.5">
-                        <i class="fa-brands fa-whatsapp text-xl"></i>
-                        שילחו הודעה לתיאום תור
-                    </a>
-                    <a href="#services" class="bg-white hover:bg-sage-100 text-sage-800 border-2 border-sage-600/20 font-bold px-8 py-4 rounded-xl text-lg flex items-center justify-center gap-2 transition-all shadow-sm">
-                        השירותים שלנו
-                    </a>
-                </div>
-
-                <!-- הוכחה חברתית / דירוג גוגל מעודכן -->
-                <div class="pt-6 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 border-t border-sage-100">
-                    <div class="flex items-center gap-1.5 bg-amber-50 border border-amber-200/60 px-4 py-2 rounded-xl">
-                        <span class="font-bold text-slate-800 text-lg">4.2</span>
-                        <div class="text-gold text-sm flex gap-0.5">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star-half-stroke"></i>
-                        </div>
-                        <span class="text-xs text-slate-500 mr-2 font-medium">(דירוג גוגל מפות)</span>
-                    </div>
-                    <div class="text-xs sm:text-sm text-slate-500 text-center sm:text-right">
-                        מעל <span class="font-bold text-sage-700">10 שנות ניסיון</span> ומאות חיות מחמד מאושרות ומטופחות בנס ציונה!
-                    </div>
-                </div>
-            </div>
-            
-            <!-- תמונת Hero (זמנית מ-Unsplash - ניתנת להחלפה בקלות) -->
-            <!-- להחלפה בתמונה מקומית: שנה את ה-src ל- "images/hero.jpg" -->
-            <div class="lg:col-span-5 relative">
-                <div class="absolute inset-0 bg-gradient-to-tr from-gold/10 to-transparent rounded-3xl transform rotate-3 scale-102 -z-10"></div>
-                <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&q=80&w=600&h=650" 
-                     alt="כלב מתוק ומאושר במספרה" 
-                     class="w-full h-[400px] sm:h-[500px] object-cover rounded-3xl shadow-xl border-4 border-white">
-                <div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur-md px-4 py-3 rounded-2xl shadow-md border border-sage-100 flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-full bg-gold/20 flex items-center justify-center text-gold">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-                    <span class="text-xs font-bold text-sage-800">טיפול רך, סבלני וללא סטרס</span>
-                </div>
-            </div>
+      <!-- Service 2 – Featured -->
+      <div class="card p-6 reveal border-2 border-gold-400 shadow-md" style="transition-delay: .14s;">
+        <div class="icon-box mb-4" style="background: linear-gradient(135deg, rgba(212,168,32,.18), rgba(232,192,74,.1));">
+          <i class="fa-solid fa-shield-cat text-2xl text-gold-600"></i>
         </div>
-    </section>
+        <h3 class="font-bold text-base mb-1.5" style="color: #2c3e35;">דילול פרווה ופתיחת קשרים</h3>
+        <p class="text-sm leading-relaxed" style="color: #6a8a80;">טיפול יסודי בפרווה עבה, פתיחת קשרים בכלים מתקדמים ובסבלנות מרבית.</p>
+      </div>
 
-    <!-- מדוע לבחור בנו / יתרונות המותג -->
-    <section class="py-16 bg-white border-y border-sage-100">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
-                <h2 class="text-3xl font-black text-sage-800">למה חיות המחמד (והבעלים) אוהבים את דוג רן?</h2>
-                <p class="text-slate-500">סטנדרט טיפוח בלתי מתפשר לצד סביבה עוטפת ומקצועית</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- יתרון 1 -->
-                <div class="p-6 bg-sage-50 rounded-2xl border border-sage-100/50 space-y-4">
-                    <div class="w-12 h-12 bg-sage-600 rounded-xl flex items-center justify-center text-white text-xl shadow-sm">
-                        <i class="fa-solid fa-cat"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-sage-800">מומחיות מיוחדת בחתולים</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        טיפול בחתולים דורש מיומנות אחרת לחלוטין. ליקה מתמחה בתספורות וטיפוח חתולים, תוך הפגנת רגישות שיא, עבודה עדינה וקריאת שפת הגוף של החתול כדי להבטיח ביטחון מלא.
-                    </p>
-                </div>
-                
-                <!-- יתרון 2 -->
-                <div class="p-6 bg-sage-50 rounded-2xl border border-sage-100/50 space-y-4">
-                    <div class="w-12 h-12 bg-gold rounded-xl flex items-center justify-center text-white text-xl shadow-sm">
-                        <i class="fa-solid fa-hand-holding-heart"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-sage-800">סבלנות וגישה חיובית</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        לא כל הכלבים והחתולים אוהבים להסתפר. אנחנו לא מאיצים בהם! הטיפול מתבצע בקצב של חיית המחמד, עם הפסקות מנוחה, פינוקים והרבה אהבה כדי לבנות אמון ארוך טווח.
-                    </p>
-                </div>
-                
-                <!-- יתרון 3 -->
-                <div class="p-6 bg-sage-50 rounded-2xl border border-sage-100/50 space-y-4">
-                    <div class="w-12 h-12 bg-slate-700 rounded-xl flex items-center justify-center text-white text-xl shadow-sm">
-                        <i class="fa-solid fa-square-p"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-sage-800">הגעה נוחה בלי לחפש חניה</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        אל תסחבו עם כלב רטוב או עם מנשא חתול כבד לאורך רחובות צפופים. המספרה ממוקמת במרכז מסחרי נגיש עם חניה חינמית לגמרי ובשפע ישר בכניסה.
-                    </p>
-                </div>
-            </div>
+      <!-- Service 3 -->
+      <div class="card p-6 reveal" style="transition-delay: .2s;">
+        <div class="icon-box mb-4" style="background: linear-gradient(135deg, rgba(45,212,191,.15), rgba(13,148,136,.1));">
+          <i class="fa-solid fa-face-smile text-2xl" style="color: #0d9488;"></i>
         </div>
-    </section>
+        <h3 class="font-bold text-base mb-1.5" style="color: #2c3e35;">עיצוב פנים עדין</h3>
+        <p class="text-sm leading-relaxed" style="color: #6a8a80;">גזיזה עדינה ומדויקת של אזור הפנים – לכלבים וחתולים כאחד – לגימור מושלם.</p>
+      </div>
 
-    <!-- סקציית שירותים ומחירון חלקי -->
-    <section id="services" class="py-16 bg-gradient-to-b from-sage-50/30 to-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
-                <span class="text-xs font-bold text-gold tracking-widest uppercase block">מה אנחנו עושים</span>
-                <h2 class="text-3xl font-black text-sage-800">מגוון טיפולי טיפוח ופינוק מא' ועד ת'</h2>
-                <p class="text-slate-500">חומרי הטיפוח הטובים ביותר, מותאמים אישית לסוג העור והפרווה</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- שירות 1 -->
-                <div class="bg-white border border-sage-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-                    <div class="space-y-3">
-                        <div class="text-sage-600 text-2xl"><i class="fa-solid fa-scissors"></i></div>
-                        <h3 class="text-lg font-bold text-sage-800">תספורת כלבים מקצועית</h3>
-                        <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">תספורות גזע, תספורות קיץ קלילות או דילול פרווה מקצועי בהתאמה אישית למבנה וסוג הכלב.</p>
-                    </div>
-                </div>
-
-                <!-- שירות 2 -->
-                <div class="bg-white border border-sage-600/20 rounded-2xl p-6 shadow-md hover:shadow-lg transition-all flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-0 left-0 bg-gold text-white text-[10px] uppercase font-bold tracking-wider px-3 py-1 rounded-bl-xl">מבוקש ביותר</div>
-                    <div class="space-y-3">
-                        <div class="text-gold text-2xl"><i class="fa-solid fa-shield-cat"></i></div>
-                        <h3 class="text-lg font-bold text-sage-800">תספורת וטיפוח חתולים</h3>
-                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">טיפול ייעודי ועדין ביותר לחתולים: הסרת קשרים, דילול פרווה מתה ותספורת מותאמת ללא סטרס או פחד.</p>
-                    </div>
-                </div>
-
-                <!-- שירות 3 -->
-                <div class="bg-white border border-sage-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-                    <div class="space-y-3">
-                        <div class="text-sage-600 text-2xl"><i class="fa-solid fa-soap"></i></div>
-                        <h3 class="text-lg font-bold text-sage-800">רחצה וטיפול היגיינה היקפי</h3>
-                        <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">חפיפה יסודית שמסירה לכלוך ושומן, ייבוש מקצועי ללא כוויות, וסירוק קפדני לפרווה מבריקה ונקייה.</p>
-                    </div>
-                </div>
-
-                <!-- שירות 4 -->
-                <div class="bg-white border border-sage-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-                    <div class="space-y-3">
-                        <div class="text-sage-600 text-2xl"><i class="fa-solid fa-hand-sparkles"></i></div>
-                        <h3 class="text-lg font-bold text-sage-800">גזיזת ציפורניים זהירה</h3>
-                        <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">גזירה ושיוף הציפורניים באורך המדויק לשמירה על נוחות ההליכה של הכלב או החתול ולמניעת פציעות.</p>
-                    </div>
-                </div>
-
-                <!-- שירות 5 -->
-                <div class="bg-white border border-sage-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-                    <div class="space-y-3">
-                        <div class="text-sage-600 text-2xl"><i class="fa-solid fa-ear-deaf"></i></div>
-                        <h3 class="text-lg font-bold text-sage-800">ניקוי אוזניים ועיניים</h3>
-                        <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">ניקוי עדין ויסודי למניעת דלקות, הפרשות וריחות לא נעימים, תוך שימוש בחומרים היפואלרגניים סטריליים.</p>
-                    </div>
-                </div>
-
-                <!-- שירות 6 -->
-                <div class="bg-white border border-sage-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-                    <div class="space-y-3">
-                        <div class="text-sage-600 text-2xl"><i class="fa-solid fa-sparkles"></i></div>
-                        <h3 class="text-lg font-bold text-sage-800">פתיחת קשרים ודילול</h3>
-                        <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">הצלה של פרווה ארוכה שהסתבכה ללא צורך בגילוח מלא, בעזרת תכשירים מיוחדים המרככים את השיער ומזינים אותו.</p>
-                    </div>
-                </div>
-            </div>
+      <!-- Service 4 -->
+      <div class="card p-6 reveal" style="transition-delay: .26s;">
+        <div class="icon-box mb-4" style="background: linear-gradient(135deg, rgba(45,212,191,.14), rgba(13,148,136,.08));">
+          <i class="fa-solid fa-spa text-2xl" style="color: #0d9488;"></i>
         </div>
-    </section>
+        <h3 class="font-bold text-base mb-1.5" style="color: #2c3e35;">מקלחות מפנקות וספא חורפי</h3>
+        <p class="text-sm leading-relaxed" style="color: #6a8a80;">חבילות ספא לכלבים וחתולים, שמפו פרימיום, מרכך ועיסוי מרגיע.</p>
+      </div>
 
-    <!-- גלריית המהפכים - לפני ואחרי (Placeholders) -->
-    <!-- שים לב: בקוד למטה יש תמונות אווירה מ-Unsplash. כשתקבל את התמונות האמיתיות, פשוט החלף את הקישורים בהתאם להערות! -->
-    <section class="py-16 bg-sage-600 text-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
-                <span class="text-xs font-bold text-white/70 tracking-widest uppercase block">העבודה שלנו מדברת בעד עצמה</span>
-                <h2 class="text-3xl font-black">המהפכים שלנו במספרה</h2>
-                <p class="text-sage-100 text-sm">ראו כיצד החברים הפרוותיים יוצאים מאצלנו רעננים, שמחים ונקיים במיוחד</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- כרטיס מהפך 1 -->
-                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/10 space-y-4">
-                    <div class="grid grid-cols-2 gap-2 relative">
-                        <div>
-                            <span class="absolute top-2 right-2 bg-slate-900/70 text-white text-[10px] px-2 py-0.5 rounded font-bold">לפני</span>
-                            <!-- תמונת לפני 1 - להחליף ב: "images/before1.jpg" -->
-                            <img src="https://images.unsplash.com/photo-1541599540903-216a46ca1ad0?auto=format&fit=crop&q=80&w=250&h=300" alt="כלב לפני תספורת" class="w-full h-48 object-cover rounded-xl">
-                        </div>
-                        <div>
-                            <span class="absolute top-2 left-2 bg-gold text-white text-[10px] px-2 py-0.5 rounded font-bold">אחרי</span>
-                            <!-- תמונת אחרי 1 - להחליף ב: "images/after1.jpg" -->
-                            <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&q=80&w=250&h=300" alt="כלב אחרי תספורת" class="w-full h-48 object-cover rounded-xl border-2 border-gold">
-                        </div>
-                    </div>
-                    <div class="text-center pt-2">
-                        <h3 class="font-bold text-lg">טיפול פרווה עמוק ותספורת קיץ</h3>
-                        <p class="text-xs text-sage-100">דילול יסודי, רחצה ועיצוב מותאם לגזע</p>
-                    </div>
-                </div>
-
-                <!-- כרטיס מהפך 2 -->
-                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/10 space-y-4">
-                    <div class="grid grid-cols-2 gap-2 relative">
-                        <div>
-                            <span class="absolute top-2 right-2 bg-slate-900/70 text-white text-[10px] px-2 py-0.5 rounded font-bold">לפני</span>
-                            <!-- תמונת לפני 2 - להחליף ב: "images/before2.jpg" -->
-                            <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&q=80&w=250&h=300" alt="חתול עם קשרים בפרווה" class="w-full h-48 object-cover rounded-xl">
-                        </div>
-                        <div>
-                            <span class="absolute top-2 left-2 bg-gold text-white text-[10px] px-2 py-0.5 rounded font-bold">אחרי</span>
-                            <!-- תמונת אחרי 2 - להחליף ב: "images/after2.jpg" -->
-                            <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&q=80&w=250&h=300" alt="חתול מטופח אחרי מספרה" class="w-full h-48 object-cover rounded-xl border-2 border-gold">
-                        </div>
-                    </div>
-                    <div class="text-center pt-2">
-                        <h3 class="font-bold text-lg">פתיחת קשרים יסודית לחתול</h3>
-                        <p class="text-xs text-sage-100">הסרת פרווה מתה ברגישות וסבלנות מקסימלית</p>
-                    </div>
-                </div>
-
-                <!-- כרטיס מהפך 3 -->
-                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/10 space-y-4">
-                    <div class="grid grid-cols-2 gap-2 relative">
-                        <div>
-                            <span class="absolute top-2 right-2 bg-slate-900/70 text-white text-[10px] px-2 py-0.5 rounded font-bold">לפני</span>
-                            <!-- תמונת לפני 3 - להחליף ב: "images/before3.jpg" -->
-                            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=250&h=300" alt="כלב קטן פרוותי לפני" class="w-full h-48 object-cover rounded-xl">
-                        </div>
-                        <div>
-                            <span class="absolute top-2 left-2 bg-gold text-white text-[10px] px-2 py-0.5 rounded font-bold">אחרי</span>
-                            <!-- תמונת אחרי 3 - להחליף ב: "images/after3.jpg" -->
-                            <img src="https://images.unsplash.com/photo-1502673530728-f79b4cbd313c?auto=format&fit=crop&q=80&w=250&h=300" alt="כלב קטן אחרי תספורת" class="w-full h-48 object-cover rounded-xl border-2 border-gold">
-                        </div>
-                    </div>
-                    <div class="text-center pt-2">
-                        <h3 class="font-bold text-lg">פינוק והיגיינה לגורים וכלבים קטנים</h3>
-                        <p class="text-xs text-sage-100">גזירת ציפורניים, ניקוי אוזניים ופתיחת פרווה</p>
-                    </div>
-                </div>
-            </div>
+      <!-- Service 5 -->
+      <div class="card p-6 reveal" style="transition-delay: .32s;">
+        <div class="icon-box mb-4" style="background: linear-gradient(135deg, rgba(212,168,32,.18), rgba(184,141,16,.1));">
+          <i class="fa-solid fa-hand-holding-heart text-2xl text-gold-600"></i>
         </div>
-    </section>
+        <h3 class="font-bold text-base mb-1.5" style="color: #2c3e35;">גזיזת ציפורניים, ניקוי אוזניים</h3>
+        <p class="text-sm leading-relaxed" style="color: #6a8a80;">טיפול היגייני מדויק ומלא זהירות – לכלבים ולחתולים. הנוחות קודמת לכל.</p>
+      </div>
 
-    <!-- חוות דעת של לקוחות אמיתיים מתוך גוגל מפות -->
-    <section class="py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
-                <span class="text-xs font-bold text-gold tracking-widest uppercase block">הלקוחות מספרים</span>
-                <h2 class="text-3xl font-black text-sage-800">המלצות אותנטיות מבעלי החיים</h2>
-                <div class="flex items-center justify-center gap-1.5 text-gold text-sm pt-1">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                    <span class="text-xs font-bold text-slate-500 mr-2">דירוג ממוצע 4.2 בגוגל מפות</span>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- חוות דעת 1 -->
-                <div class="p-6 bg-sage-50 rounded-2xl border border-sage-100 relative flex flex-col justify-between">
-                    <p class="text-slate-700 italic text-sm leading-relaxed mb-4">
-                        "ליקה האלופה והמקצועית טיפלה בחתולה שלי במסירות ועדינות! ממש תענוג, רואים שהיא עושה את זה מכל הלב והנשמה."
-                    </p>
-                    <div class="flex items-center justify-between border-t border-sage-100 pt-3">
-                        <span class="font-bold text-sage-800 text-sm">איילה אהרוני</span>
-                        <div class="text-gold text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    </div>
-                </div>
-
-                <!-- חוות דעת 2 -->
-                <div class="p-6 bg-sage-50 rounded-2xl border border-sage-100 relative flex flex-col justify-between">
-                    <p class="text-slate-700 italic text-sm leading-relaxed mb-4">
-                        "יצרנו קשר עם חברת הטיפוח הזו והיינו מרוצים לחלוטין! הציפורניים של הכלב שלי לא רק נגזזו בקפידה וללא לחץ, אלא גם טופלו ביסודיות... הכל נעשה בזהירות ובמקצועיות רבה... הכלב שלי הרגיש רגוע ובטוח."
-                    </p>
-                    <div class="flex items-center justify-between border-t border-sage-100 pt-3">
-                        <span class="font-bold text-sage-800 text-sm">דונייר אמינוב</span>
-                        <div class="text-gold text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    </div>
-                </div>
-
-                <!-- חוות דעת 3 -->
-                <div class="p-6 bg-sage-50 rounded-2xl border border-sage-100 relative flex flex-col justify-between">
-                    <p class="text-slate-700 italic text-sm leading-relaxed mb-4">
-                        "מספר ממש יפה את הכלבים! מומלץ בחום."
-                    </p>
-                    <div class="flex items-center justify-between border-t border-sage-100 pt-3">
-                        <span class="font-bold text-sage-800 text-sm">מוטי מור</span>
-                        <div class="text-gold text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    </div>
-                </div>
-
-                <!-- חוות דעת 4 -->
-                <div class="p-6 bg-sage-50 rounded-2xl border border-sage-100 relative flex flex-col justify-between">
-                    <p class="text-slate-700 italic text-sm leading-relaxed mb-4">
-                        "תודה רבה ממליצה!! איזה מקצועיות ומחירים הוגנים מאוד, באהבה גדולה."
-                    </p>
-                    <div class="flex items-center justify-between border-t border-sage-100 pt-3">
-                        <span class="font-bold text-sage-800 text-sm">סטפי שיגריס</span>
-                        <div class="text-gold text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    </div>
-                </div>
-            </div>
+      <!-- Service 6 -->
+      <div class="card p-6 reveal" style="transition-delay: .38s;">
+        <div class="icon-box mb-4" style="background: linear-gradient(135deg, rgba(115,168,155,.18), rgba(79,140,126,.1));">
+          <i class="fa-solid fa-sparkles text-2xl text-sage-600"></i>
         </div>
-    </section>
+        <h3 class="font-bold text-base mb-1.5" style="color: #2c3e35;">טיפוח, היגיינה ויצירתיות</h3>
+        <p class="text-sm leading-relaxed" style="color: #6a8a80;">כל תספורת היא יצירת אמנות. היגיינה מושלמת בשילוב עיצוב יצירתי.</p>
+      </div>
 
-    <!-- טופס יצירת קשר חכם המפנה ישירות לווטסאפ -->
-    <section id="book-appointment" class="py-16 bg-gradient-to-b from-white to-sage-50">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="bg-white border border-sage-100 rounded-3xl shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-12">
-                <!-- פרטי קשר משלימים -->
-                <div class="md:col-span-5 bg-sage-700 text-white p-8 space-y-6 flex flex-col justify-between">
-                    <div class="space-y-4">
-                        <h3 class="text-2xl font-black">בואו נדבר!</h3>
-                        <p class="text-sage-100 text-sm leading-relaxed">נשמח לעמוד לרשותכם, לענות על כל שאלה ולתאם את התור המושלם עבור חברכם הפרוותי.</p>
-                    </div>
-                    
-                    <div class="space-y-4 text-sm">
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-phone text-gold text-lg shrink-0"></i>
-                            <a href="tel:0548321588" class="hover:underline font-bold">054-8321588</a>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-location-dot text-gold text-lg shrink-0"></i>
-                            <span>נס ציונה (במרכז המסחרי)</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-square-p text-gold text-lg shrink-0"></i>
-                            <span class="font-medium text-sage-50">חניה בשפע ובחינם בכניסה</span>
-                        </div>
-                    </div>
+    </div>
+  </div>
+</section>
 
-                    <div class="pt-4 border-t border-white/10 flex items-center gap-2">
-                        <span class="text-xs text-sage-200">שעות פעילות: בתאום מראש בלבד</span>
-                    </div>
-                </div>
+<div class="sec-divider"></div>
 
-                <!-- הטופס החכם -->
-                <div class="md:col-span-7 p-8">
-                    <h3 class="text-xl font-bold text-sage-800 mb-2">השאירו פרטים ונחזור אליכם</h3>
-                    <p class="text-xs text-slate-500 mb-6">מילוי הטופס ייצר הודעת ווטסאפ מובנית לפרטי העסק באופן מיידי.</p>
-                    
-                    <form id="whatsappForm" class="space-y-4">
-                        <div>
-                            <label for="name" class="block text-xs font-bold text-slate-700 mb-1">שם מלא *</label>
-                            <input type="text" id="name" required placeholder="איך קוראים לכם?" class="w-full px-4 py-3 border border-sage-100 rounded-xl text-sm focus:outline-none focus:border-sage-600 focus:ring-1 focus:ring-sage-600">
-                        </div>
-                        
-                        <div>
-                            <label for="phone" class="block text-xs font-bold text-slate-700 mb-1">מספר טלפון לנייד *</label>
-                            <input type="tel" id="phone" required pattern="[0-9]{9,10}" placeholder="למשל: 0548321588" class="w-full px-4 py-3 border border-sage-100 rounded-xl text-sm focus:outline-none focus:border-sage-600 focus:ring-1 focus:ring-sage-600 text-right" dir="ltr">
-                        </div>
-                        
-                        <div>
-                            <label for="petType" class="block text-xs font-bold text-slate-700 mb-1">סוג חיית המחמד *</label>
-                            <select id="petType" required class="w-full px-4 py-3 border border-sage-100 rounded-xl text-sm focus:outline-none focus:border-sage-600 focus:ring-1 focus:ring-sage-600 bg-white">
-                                <option value="" disabled selected>ביחרו מתוך הרשימה</option>
-                                <option value="כלב">כלב 🐶</option>
-                                <option value="חתול">חתול 🐱</option>
-                                <option value="אחר">חיה אחרת 🐾</option>
-                            </select>
-                        </div>
-                        
-                        <div>
-                            <label for="message" class="block text-xs font-bold text-slate-700 mb-1">הערות או בקשות מיוחדות (אופציונלי)</label>
-                            <textarea id="message" rows="3" placeholder="למשל: גזע הכלב, רגישויות מיוחדות או שירות מבוקש..." class="w-full px-4 py-3 border border-sage-100 rounded-xl text-sm focus:outline-none focus:border-sage-600 focus:ring-1 focus:ring-sage-600"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="w-full bg-sage-600 hover:bg-sage-700 text-white font-bold py-3 px-6 rounded-xl text-sm flex items-center justify-center gap-2 transition-all shadow-md shadow-sage-600/10 mt-2">
-                            <i class="fa-brands fa-whatsapp text-base"></i>
-                            חזרו אליי לתיאום תור בווטסאפ
-                        </button>
-                    </form>
-                </div>
-            </div>
+<!-- ═══════════════════════════════════════════════════════════
+     BEFORE / AFTER GALLERY
+════════════════════════════════════════════════════════════ -->
+<section class="py-16 sm:py-24" id="makeover" style="background: linear-gradient(160deg, #eaf3f0 0%, #f4f8f6 60%, #fdf8ee 100%);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-12 reveal">
+      <span class="pill mb-4 inline-flex">
+        <i class="fa-solid fa-image"></i>
+        גלריית מהפכים
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-black mb-3" style="color: #2c3e35;">המהפכים שלנו</h2>
+      <p class="text-base font-medium max-w-xl mx-auto" style="color: #5a7a6e;">לפני ואחרי – ההבדל שידיים מקצועיות יכולות לעשות. כל תמונה מספרת סיפור.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+
+      <!-- BA Card 1 – Dog -->
+      <div class="ba-card reveal" style="transition-delay: .1s;">
+        <div class="grid grid-cols-2 gap-0" style="height: 220px;">
+          <div class="relative overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1546527868-ccb7ee7dfa6a?w=400&q=78&auto=format&fit=crop&crop=face"
+              alt="כלב לפני טיפוח"
+              style="width: 100%; height: 220px; object-fit: cover; filter: saturate(0.75) brightness(0.92);"
+              loading="lazy"
+            />
+            <span class="ba-label">לפני ✂️</span>
+          </div>
+          <div class="relative overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&q=80&auto=format&fit=crop&crop=face"
+              alt="כלב אחרי טיפוח מקצועי"
+              style="width: 100%; height: 220px; object-fit: cover;"
+              loading="lazy"
+            />
+            <span class="ba-label">אחרי ✨</span>
+          </div>
         </div>
-    </section>
-
-    <!-- פוטר סיומת תחתון -->
-    <footer class="bg-sage-800 text-sage-100 py-12 border-t border-sage-700">
-        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-right">
-            <!-- פרטי העסק -->
-            <div class="space-y-2">
-                <span class="text-xl font-black text-white tracking-tight block">דוג רן</span>
-                <p class="text-xs text-sage-200">מספרת כלבים וחתולים בנס ציונה בהנהלת ליקה.<br>חווית טיפוח רגועה ומקצועית מכל הלב.</p>
-            </div>
-            
-            <!-- קישורי ניווט מהירים לעזרים חיצוניים -->
-            <div class="flex justify-center gap-4">
-                <a href="https://waze.com/ul?q=נס+ציונה" target="_blank" class="bg-white/5 hover:bg-white/10 px-4 py-2 rounded-xl text-xs flex items-center gap-2 transition-all border border-white/5">
-                    <i class="fa-brands fa-waze text-sky-400"></i>
-                    ניווט ב-Waze
-                </a>
-                <a href="https://maps.google.com/?q=נס+ציונה" target="_blank" class="bg-white/5 hover:bg-white/10 px-4 py-2 rounded-xl text-xs flex items-center gap-2 transition-all border border-white/5">
-                    <i class="fa-solid fa-map-location-dot text-gold"></i>
-                    גוגל מפות
-                </a>
-            </div>
-            
-            <!-- זכויות יוצרים -->
-            <div class="text-xs text-sage-300 md:text-left">
-                &copy; 2026 דוג רן. כל הזכויות שמורות. <br class="hidden sm:inline"> נבנה באהבה עבור חיות מחמד.
-            </div>
+        <div class="p-4">
+          <p class="text-sm font-bold" style="color: #2c3e35;">מקסי – מלטי פו</p>
+          <p class="text-xs mt-0.5" style="color: #73a89b;">תספורת גזע + ספא מלא + גזיזת ציפורניים</p>
         </div>
-    </footer>
+      </div>
 
-    <!-- סקריפט חכם לביצוע האינטגרציה לווטסאפ -->
-    <script>
-        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // מונע את רענון העמוד הדיפולטיבי
-            
-            // שליפת הנתונים מהשדות
-            const name = document.getElementById('name').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const petType = document.getElementById('petType').value;
-            const userMsg = document.getElementById('message').value.trim();
-            
-            // מספר העסק בפורמט בינלאומי ללא ה-0 בהתחלה (972548321588)
-            const businessNumber = "972548321588";
-            
-            // בניית טקסט ההודעה בצורה קריאה ומעוצבת
-            let whatsappText = `היי ליקה, אשמח לתאם תור למספרת דוג רן! 👋\n\n`;
-            whatsappText += `🐾 *שם מלא:* ${name}\n`;
-            whatsappText += `📞 *טלפון:* ${phone}\n`;
-            whatsappText += `🐱 *סוג חיה:* ${petType}\n`;
-            
-            if(userMsg) {
-                whatsappText += `📝 *הערות מיוחדות:* ${userMsg}`;
-            } else {
-                whatsappText += `📝 *הערות מיוחדות:* ללא הערות`;
-            }
-            
-            // קידוד הטקסט לכתובת URL חוקית
-            const encodedText = encodeURIComponent(whatsappText);
-            
-            // יצירת קישור לפתיחת חלון הווטסאפ
-            const whatsappUrl = `https://wa.me/${businessNumber}?text=${encodedText}`;
-            
-            // פתיחת הקישור בחלון חדש
-            window.open(whatsappUrl, '_blank');
-        });
-    </script>
+      <!-- BA Card 2 – Cat -->
+      <div class="ba-card reveal" style="transition-delay: .18s;">
+        <div class="grid grid-cols-2 gap-0" style="height: 220px;">
+          <div class="relative overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?w=400&q=78&auto=format&fit=crop&crop=face"
+              alt="חתול לפני טיפוח"
+              style="width: 100%; height: 220px; object-fit: cover; filter: saturate(0.7) brightness(0.9);"
+              loading="lazy"
+            />
+            <span class="ba-label">לפני ✂️</span>
+          </div>
+          <div class="relative overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=400&q=80&auto=format&fit=crop&crop=face"
+              alt="חתול אחרי טיפוח מקצועי"
+              style="width: 100%; height: 220px; object-fit: cover;"
+              loading="lazy"
+            />
+            <span class="ba-label">אחרי ✨</span>
+          </div>
+        </div>
+        <div class="p-4">
+          <p class="text-sm font-bold" style="color: #2c3e35;">לונה – חתולה פרסית</p>
+          <p class="text-xs mt-0.5" style="color: #73a89b;">דילול פרווה + עיצוב פנים + ניקוי אוזניים</p>
+        </div>
+      </div>
+
+      <!-- BA Card 3 – Dog 2 -->
+      <div class="ba-card reveal" style="transition-delay: .26s;">
+        <div class="grid grid-cols-2 gap-0" style="height: 220px;">
+          <div class="relative overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1600804340584-c7db2eacf0bf?w=400&q=78&auto=format&fit=crop&crop=face"
+              alt="כלב לפני תספורת"
+              style="width: 100%; height: 220px; object-fit: cover; filter: saturate(0.72) brightness(0.9);"
+              loading="lazy"
+            />
+            <span class="ba-label">לפני ✂️</span>
+          </div>
+          <div class="relative overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1558788353-f76d92427f16?w=400&q=80&auto=format&fit=crop&crop=face"
+              alt="כלב אחרי תספורת מקצועית"
+              style="width: 100%; height: 220px; object-fit: cover;"
+              loading="lazy"
+            />
+            <span class="ba-label">אחרי ✨</span>
+          </div>
+        </div>
+        <div class="p-4">
+          <p class="text-sm font-bold" style="color: #2c3e35;">קוקי – שיצו</p>
+          <p class="text-xs mt-0.5" style="color: #73a89b;">תספורת יפנית + מקלחת + עיצוב פנים</p>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="text-center text-xs mt-6 font-medium" style="color: #9ab8b0;">
+      * התמונות לצרכי המחשה. תמונות מלקוחות אמיתיים יתווספו בקרוב.
+    </p>
+  </div>
+</section>
+
+<div class="sec-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     REVIEWS
+════════════════════════════════════════════════════════════ -->
+<section class="py-16 sm:py-24 bg-white" id="reviews">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-12 reveal">
+      <span class="pill mb-4 inline-flex">
+        <i class="fa-solid fa-comments"></i>
+        ביקורות אמיתיות
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-black mb-3" style="color: #2c3e35;">הלקוחות (והזנבות) מספרים עלינו</h2>
+      <p class="text-base font-medium max-w-xl mx-auto mb-5" style="color: #5a7a6e;">ביקורות אמיתיות מגוגל מפות – מאנשים ופרווה שהתחברו לליקה</p>
+
+      <!-- Google rating badge -->
+      <div class="inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-white shadow-md border" style="border-color: rgba(160,196,186,0.3);">
+        <svg width="20" height="20" viewBox="0 0 24 24">
+          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+        </svg>
+        <div class="flex items-baseline gap-1.5">
+          <span class="text-xl font-black" style="color: #2c3e35;">4.2</span>
+          <div class="flex gap-0.5">
+            <span class="star-full">★</span>
+            <span class="star-full">★</span>
+            <span class="star-full">★</span>
+            <span class="star-full">★</span>
+            <span style="color: #d0cfc4;">★</span>
+          </div>
+          <span class="text-sm font-semibold" style="color: #5a7a6e;">דירוג 4.2 בגוגל מפות</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+      <!-- Review 1 – Ayala -->
+      <div class="card p-6 reveal" style="transition-delay: .08s;">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-11 h-11 rounded-full flex items-center justify-center text-white font-black text-sm flex-shrink-0" style="background: linear-gradient(135deg, #73a89b, #3c7066);">א</div>
+          <div>
+            <div class="font-bold text-sm" style="color: #2c3e35;">איילה אהרוני</div>
+            <div class="flex gap-0.5 mt-0.5">
+              <span class="star-full text-base">★</span><span class="star-full text-base">★</span><span class="star-full text-base">★</span><span class="star-full text-base">★</span><span class="star-full text-base">★</span>
+              <span class="text-xs font-semibold mr-1.5" style="color: #9ab8b0;">5/5</span>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm leading-relaxed" style="color: #4a6a62;">"ליקה האלופה והמקצועית טיפלה בחתולה שלי במסירות ועדינות! ממש תענוג, רואים שהיא עושה את זה מכל הלב והנשמה."</p>
+        <div class="mt-4 pt-4 border-t flex items-center gap-2" style="border-color: rgba(160,196,186,0.2);">
+          <i class="fa-solid fa-heart text-sage-400"></i>
+          <span class="text-xs font-semibold" style="color: #73a89b;">לקוחה מרוצה · חתולה</span>
+        </div>
+      </div>
+
+      <!-- Review 2 – Doniyor -->
+      <div class="card p-6 reveal" style="transition-delay: .14s;">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-11 h-11 rounded-full flex items-center justify-center text-white font-black text-sm flex-shrink-0" style="background: linear-gradient(135deg, #e8c04a, #d4a820);">ד</div>
+          <div>
+            <div class="font-bold text-sm" style="color: #2c3e35;">דונייר אמינוב</div>
+            <div class="flex gap-0.5 mt-0.5">
+              <span class="star-full text-base">★</span><span class="star-full text-base">★</span><span class="star-full text-base">★</span><span class="star-full text-base">★</span><span class="star-full text-base">★</span>
+              <span class="text-xs font-semibold mr-1.5" style="color: #9ab8b0;">5/5</span>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm leading-relaxed" style="color: #4a6a62;">"יצרנו קשר עם חברת הטיפוח הזו והיינו מרוצים לחלוטין! הציפורניים של הכלב שלי נגזזו בקפידה וללא לחץ, וטופלו ביסודיות בזהירות ובמקצועיות רבה. הכלב שלי הרגיש רגוע ובטוח."</p>
+        <div class="mt-4 pt-4 border-t flex items-center gap-2" style="border-color: rgba(160,196,186,0.2);">
+          <i class="fa-solid fa-heart text-sage-400"></i>
+          <span class="text-xs font-semibold" style="color: #73a89b;">לקוח מרוצה · כלב</span>
+        </div>
+      </div>
+
+      <!-- Review 3 – Moti -->
+      <div class="card p-6 reveal" style="transition-delay: .2s;">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-11 h-11 rounded-full flex items-center justify-center text-white font-black text-sm flex-shrink-0" style="background: linear-gradient(135deg, #2dd4bf, #0d9488);">מ</div>
+          <div>
+            <div class="font-bold text-sm" style="color: #2c3e35;">מוטי מור</div>
+            <div class="flex gap-0.5 mt-0.5">
+              <span class="star-full text-base">★</span><span class="star-full text-base">★</span><span class="star-full text-base">★</span><span class="star-full text-base">★</span><span class="star-full text-base">★</span>
+              <span class="text-xs font-semibold mr-1.5" style="color: #9ab8b0;">5/5</span>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm leading-relaxed" style="color: #4a6a62;">"מספר ממש יפה את הכלבים! מומלץ בחום."</p>
+        <div class="mt-4 pt-4 border-t flex items-center gap-2" style="border-color: rgba(160,196,186,0.2);">
+          <i class="fa-solid fa-heart text-sage-400"></i>
+          <span class="text-xs font-semibold" style="color: #73a89b;">לקוח מרוצה · כלב</span>
+        </div>
+      </div>
+
+      <!-- Review 4 – Stephy -->
+      <div class="card p-6 reveal" style="transition-delay: .26s;">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-11 h-11 rounded-full flex items-center justify-center text-white font-black text-sm flex-shrink-0" style="background: linear-gradient(135deg, #73a89b, #305a52);">ס</div>
+          <div>
+            <div class="font-bold text-sm" style="color: #2c3e35;">סטפי שיגריס</div>
+            <div class="flex gap-0.5 mt-0.5">
+              <span class="star-full text-base">★</span><span class="star-full text-base">★</span><span class="star-full text-base">★</span><span class="star-full text-base">★</span><span class="star-full text-base">★</span>
+              <span class="text-xs font-semibold mr-1.5" style="color: #9ab8b0;">5/5</span>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm leading-relaxed" style="color: #4a6a62;">"תודה רבה ממליצה!! איזה מקצועיות ומחירים הוגנים מאוד, באהבה גדולה."</p>
+        <div class="mt-4 pt-4 border-t flex items-center gap-2" style="border-color: rgba(160,196,186,0.2);">
+          <i class="fa-solid fa-heart text-sage-400"></i>
+          <span class="text-xs font-semibold" style="color: #73a89b;">לקוחה מרוצה</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA to Google Maps -->
+    <div class="text-center mt-10 reveal">
+      <a href="https://maps.google.com/?q=דוג+רן+נס+ציונה" target="_blank" rel="noopener"
+         class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl font-semibold text-sm transition-all hover:opacity-85"
+         style="background: #f4f8f6; border: 1.5px solid rgba(115,168,155,0.35); color: #3c7066;">
+        <svg width="16" height="16" viewBox="0 0 24 24">
+          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+        </svg>
+        ראו את כל הביקורות שלנו בגוגל מפות
+        <i class="fa-solid fa-arrow-left text-xs"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="sec-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CONTACT + LOCATION
+════════════════════════════════════════════════════════════ -->
+<section class="py-16 sm:py-24 paw-bg" id="contact">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-12 reveal">
+      <span class="pill mb-4 inline-flex">
+        <i class="fa-solid fa-map-pin"></i>
+        מיקום ויצירת קשר
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-black mb-3" style="color: #2c3e35;">בואו לבקר אותנו</h2>
+      <p class="text-base font-medium max-w-lg mx-auto" style="color: #5a7a6e;">מספרת דוג רן ממוקמת במרכז המסחרי שאול המלך בנס ציונה – חניה בשפע ובחינם לכל הלקוחות!</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+      <!-- SMART WHATSAPP FORM -->
+      <div class="reveal" style="transition-delay: .1s;">
+        <div class="card p-7 sm:p-8">
+          <h3 class="text-xl font-black mb-1.5" style="color: #2c3e35;">קבעו תור עכשיו</h3>
+          <p class="text-sm font-medium mb-6" style="color: #73a89b;">מלאו את הפרטים – נפתח לכם ישירות וואטסאפ עם ההודעה מוכנה!</p>
+
+          <div class="space-y-4" id="apptForm">
+            <!-- Name -->
+            <div>
+              <label class="f-label" for="fname">שם מלא <span style="color: #e05c5c;">*</span></label>
+              <input type="text" id="fname" class="f-input" placeholder="ישראל ישראלי" autocomplete="name" />
+              <p class="f-error" id="fname-err">נא להזין שם מלא (לפחות 2 תווים)</p>
+            </div>
+            <!-- Phone -->
+            <div>
+              <label class="f-label" for="fphone">מספר טלפון <span style="color: #e05c5c;">*</span></label>
+              <input type="tel" id="fphone" class="f-input" placeholder="054-0000000" dir="ltr" autocomplete="tel" />
+              <p class="f-error" id="fphone-err">נא להזין מספר טלפון תקין (05X-XXXXXXX)</p>
+            </div>
+            <!-- Pet type -->
+            <div>
+              <label class="f-label" for="fpet">סוג החיה <span style="color: #e05c5c;">*</span></label>
+              <select id="fpet" class="f-input" style="cursor: pointer;">
+                <option value="" disabled selected>בחרו סוג חיה...</option>
+                <option value="כלב">כלב 🐕</option>
+                <option value="חתול">חתול 🐈</option>
+                <option value="כלב וחתול">כלב וחתול 🐕🐈</option>
+              </select>
+              <p class="f-error" id="fpet-err">נא לבחור סוג חיה</p>
+            </div>
+            <!-- Notes -->
+            <div>
+              <label class="f-label" for="fnotes">הערות / בקשות מיוחדות</label>
+              <textarea id="fnotes" class="f-input resize-none" rows="3" placeholder="ספרו לנו על החיה, גזע, גיל, בקשות מיוחדות..."></textarea>
+            </div>
+            <!-- Submit -->
+            <button type="button" onclick="submitToWhatsApp()" class="btn btn-wa btn-full" style="font-size: 15px; padding: 15px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+              חזרו אליי לתיאום תור בוואטסאפ
+            </button>
+            <p class="text-center text-xs font-medium mt-1" style="color: #9ab8b0;">
+              לחיצה תפתח WhatsApp עם הפרטים שלכם מוכנים לשליחה
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- INFO COLUMN -->
+      <div class="space-y-4 reveal" style="transition-delay: .2s;">
+
+        <!-- Address + Parking -->
+        <div class="rounded-2xl p-5 flex items-start gap-4" style="background: #f4f8f6; border: 1.5px solid rgba(160,196,186,0.28);">
+          <div class="icon-box flex-shrink-0" style="background: linear-gradient(135deg, #73a89b, #3c7066);">
+            <i class="fa-solid fa-map-marker-alt text-white text-xl"></i>
+          </div>
+          <div>
+            <div class="text-sm font-bold mb-1" style="color: #2c3e35;">כתובת</div>
+            <div class="text-sm font-medium" style="color: #4a6a62;">שאול המלך 7, נס ציונה</div>
+            <div class="text-sm" style="color: #5a7a6e;">מרכז מסחרי</div>
+            <div class="parking-badge mt-2 text-xs">
+              <i class="fa-solid fa-square-p"></i>
+              חניה בשפע ובחינם במגרש!
+            </div>
+          </div>
+        </div>
+
+        <!-- Phones -->
+        <div class="rounded-2xl p-5 flex items-start gap-4" style="background: #f4f8f6; border: 1.5px solid rgba(160,196,186,0.28);">
+          <div class="icon-box flex-shrink-0" style="background: linear-gradient(135deg, #e8c04a, #d4a820);">
+            <i class="fa-solid fa-phone text-white text-xl"></i>
+          </div>
+          <div>
+            <div class="text-sm font-bold mb-1" style="color: #2c3e35;">טלפון</div>
+            <a href="tel:054-8321588" class="block text-sm font-semibold hover:underline" dir="ltr" style="color: #4f8c7e;">054-832-1588</a>
+            <a href="tel:054-5896560" class="block text-sm font-semibold hover:underline mt-0.5" dir="ltr" style="color: #4f8c7e;">054-589-6560</a>
+          </div>
+        </div>
+
+        <!-- Hours -->
+        <div class="rounded-2xl p-5 flex items-start gap-4" style="background: #f4f8f6; border: 1.5px solid rgba(160,196,186,0.28);">
+          <div class="icon-box flex-shrink-0" style="background: linear-gradient(135deg, #305a52, #1e3935);">
+            <i class="fa-solid fa-clock text-white text-xl"></i>
+          </div>
+          <div>
+            <div class="text-sm font-bold mb-1" style="color: #2c3e35;">שעות פעילות</div>
+            <div class="text-sm" style="color: #4a6a62;">
+              <strong>ראשון–חמישי:</strong> 09:00–19:00<br/>
+              <strong>שישי:</strong> 08:00–15:00<br/>
+              <strong>שבת:</strong> סגור
+            </div>
+          </div>
+        </div>
+
+        <!-- WhatsApp quick contact -->
+        <div class="rounded-2xl p-5 flex items-start gap-4" style="background: #f0fdf4; border: 1.5px solid rgba(37,211,102,0.22);">
+          <div class="icon-box flex-shrink-0" style="background: linear-gradient(135deg, #25d366, #128c4e);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+          </div>
+          <div>
+            <div class="text-sm font-bold mb-1" style="color: #2c3e35;">WhatsApp</div>
+            <a href="https://wa.me/972548321588" target="_blank" rel="noopener"
+               class="text-sm font-semibold hover:underline" dir="ltr" style="color: #128c4e;">054-832-1588</a>
+            <p class="text-xs mt-0.5" style="color: #4a8a5a;">פתוח לפניות ישירות ✓</p>
+          </div>
+        </div>
+
+        <!-- Map / Navigation -->
+        <div class="rounded-2xl overflow-hidden" style="border: 1.5px solid rgba(160,196,186,0.3);">
+          <div class="relative flex flex-col items-center justify-center gap-3 py-8"
+               style="background: linear-gradient(135deg, #c6dbd5 0%, #a0c4ba 100%); min-height: 140px;">
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg" style="background: rgba(255,255,255,0.88);">
+              <i class="fa-solid fa-map text-2xl text-sage-600"></i>
+            </div>
+            <div class="font-bold text-sm text-center" style="color: #1e3935;">שאול המלך 7, נס ציונה</div>
+            <div class="flex gap-2 flex-wrap justify-center px-4">
+              <a href="https://waze.com/ul?q=שאול+המלך+7+נס+ציונה" target="_blank" rel="noopener"
+                 class="flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-bold text-white"
+                 style="background: #08a8f5;">
+                <i class="fa-brands fa-waze"></i>
+                Waze
+              </a>
+              <a href="https://maps.google.com/?q=שאול+המלך+7+נס+ציונה" target="_blank" rel="noopener"
+                 class="flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-bold text-white"
+                 style="background: #4285F4;">
+                <i class="fa-brands fa-google"></i>
+                Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<footer style="background: #1e3935;">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+
+      <!-- Brand -->
+      <div class="flex items-center gap-3">
+        <div class="icon-box" style="background: rgba(115,168,155,0.22); width: 38px; height: 38px; border-radius: 12px;">
+          <i class="fa-solid fa-paw text-xl" style="color: #a0c4ba;"></i>
+        </div>
+        <div>
+          <div class="font-black text-sm" style="color: #a0c4ba;">דוג רן | מספרת בוטיק</div>
+          <div class="text-xs" style="color: #4a7060;">שאול המלך 7, נס ציונה · 054-832-1588</div>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div class="flex gap-6 text-xs font-semibold flex-wrap justify-center" style="color: #4a7060;">
+        <a href="#hero" class="hover:text-sage-300 transition-colors">בית</a>
+        <a href="#services" class="hover:text-sage-300 transition-colors">שירותים</a>
+        <a href="#makeover" class="hover:text-sage-300 transition-colors">מהפכים</a>
+        <a href="#reviews" class="hover:text-sage-300 transition-colors">ביקורות</a>
+        <a href="#contact" class="hover:text-sage-300 transition-colors">צור קשר</a>
+      </div>
+
+      <!-- Credits -->
+      <div class="text-center sm:text-left">
+        <div class="text-xs" style="color: #3a5a50;">© 2026 דוג רן. כל הזכויות שמורות.</div>
+        <div class="text-xs mt-0.5" style="color: #3a5a50;">נבנה באהבה 🐾</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════════
+     MOBILE STICKY BOTTOM BAR
+════════════════════════════════════════════════════════════ -->
+<div class="show-sm-only fixed bottom-0 right-0 left-0 z-50 bottom-bar safe-bottom" id="mobileBar">
+  <div class="flex items-center justify-around px-2 py-2.5">
+
+    <!-- Call -->
+    <a href="tel:054-8321588"
+       class="flex flex-col items-center gap-1 px-3 py-1.5 rounded-2xl active:scale-95 transition-transform"
+       style="background: rgba(79,140,126,0.18);">
+      <div class="icon-box" style="background: linear-gradient(135deg, #73a89b, #3c7066); width: 42px; height: 42px; border-radius: 13px;">
+        <i class="fa-solid fa-phone text-white text-xl"></i>
+      </div>
+      <span class="text-xs font-semibold" style="color: #a0c4ba;">טלפון</span>
+    </a>
+
+    <!-- WhatsApp (center – larger) -->
+    <a href="https://wa.me/972548321588" target="_blank" rel="noopener"
+       class="flex flex-col items-center gap-1 px-4 py-1.5 rounded-2xl active:scale-95 transition-transform"
+       style="background: rgba(37,211,102,0.15);">
+      <div style="width: 52px; height: 52px; border-radius: 16px; background: linear-gradient(135deg, #25d366, #128c4e); box-shadow: 0 4px 18px rgba(37,211,102,0.45); display: flex; align-items: center; justify-content: center;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+      </div>
+      <span class="text-xs font-semibold" style="color: #4ade80;">וואטסאפ</span>
+    </a>
+
+    <!-- Navigation -->
+    <a href="https://waze.com/ul?q=שאול+המלך+7+נס+ציונה" target="_blank" rel="noopener"
+       class="flex flex-col items-center gap-1 px-3 py-1.5 rounded-2xl active:scale-95 transition-transform"
+       style="background: rgba(8,168,245,0.15);">
+      <div class="icon-box" style="background: linear-gradient(135deg, #38bdf8, #0284c7); width: 42px; height: 42px; border-radius: 13px;">
+        <i class="fa-brands fa-waze text-white text-xl"></i>
+      </div>
+      <span class="text-xs font-semibold" style="color: #7dd3fc;">ניווט</span>
+    </a>
+
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════════════════════════ -->
+<script>
+  // Header scroll behavior
+  const hdr = document.getElementById('hdr');
+  window.addEventListener('scroll', () => {
+    hdr.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  // Intersection Observer for reveal animations
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  revealEls.forEach(el => io.observe(el));
+
+  // Form validation with real-time error display
+  function validateForm() {
+    const name = document.getElementById('fname').value.trim();
+    const phone = document.getElementById('fphone').value.trim();
+    const pet = document.getElementById('fpet').value;
+
+    let isValid = true;
+
+    // Validate name
+    if (name.length < 2) {
+      document.getElementById('fname-err').classList.add('show');
+      document.getElementById('fname').classList.add('error');
+      isValid = false;
+    } else {
+      document.getElementById('fname-err').classList.remove('show');
+      document.getElementById('fname').classList.remove('error');
+    }
+
+    // Validate phone (Israeli format: 050-8321588 or 0508321588)
+    const phoneRegex = /^05\d{8}$|^05\d-\d{3}-\d{4}$/;
+    if (!phoneRegex.test(phone.replace(/\D/g, '') === phone ? phone : phone.replace(/\D/g, ''))) {
+      document.getElementById('fphone-err').classList.add('show');
+      document.getElementById('fphone').classList.add('error');
+      isValid = false;
+    } else {
+      document.getElementById('fphone-err').classList.remove('show');
+      document.getElementById('fphone').classList.remove('error');
+    }
+
+    // Validate pet type
+    if (!pet) {
+      document.getElementById('fpet-err').classList.add('show');
+      document.getElementById('fpet').classList.add('error');
+      isValid = false;
+    } else {
+      document.getElementById('fpet-err').classList.remove('show');
+      document.getElementById('fpet').classList.remove('error');
+    }
+
+    return isValid;
+  }
+
+  // Real-time validation
+  document.getElementById('fname').addEventListener('blur', validateForm);
+  document.getElementById('fphone').addEventListener('blur', validateForm);
+  document.getElementById('fpet').addEventListener('change', validateForm);
+
+  // WhatsApp submission
+  function submitToWhatsApp() {
+    if (!validateForm()) {
+      return;
+    }
+
+    const name = document.getElementById('fname').value.trim();
+    const phone = document.getElementById('fphone').value.trim();
+    const pet = document.getElementById('fpet').value;
+    const notes = document.getElementById('fnotes').value.trim();
+
+    const businessNumber = '972548321588';
+
+    let whatsappText = `היי ליקה, אשמח לתאם תור למספרת דוג רן! 🐾\n\n`;
+    whatsappText += `👤 *שם מלא:* ${name}\n`;
+    whatsappText += `📞 *טלפון לחזרה:* ${phone}\n`;
+    whatsappText += `🐶 *סוג חיית מחמד:* ${pet}\n`;
+    whatsappText += `📝 *הערות/בקשות:* ${notes ? notes : 'ללא הערות מיוחדות'}`;
+
+    const encodedText = encodeURIComponent(whatsappText);
+    window.open(`https://wa.me/${businessNumber}?text=${encodedText}`, '_blank');
+  }
+</script>
+
 </body>
 </html>
