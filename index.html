@@ -472,13 +472,40 @@
       </nav>
 
       <!-- Header CTA -->
-  <a href="https://wa.me/972548321588" target="_blank" rel="noopener" class="btn btn-wa" style="padding: 10px 18px; font-size: 14px; border-radius: 12px;">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
-    <span class="hide-sm">קביעת תור</span>
-    <span class="show-sm-only">ווצאפ</span>
-  </a>
-  </div> </div>
-</header>
+  <div class="relative inline-block text-left">
+  <button id="menu-btn" class="flex items-center justify-center rounded-xl active:scale-95 transition-transform" 
+          style="width: 42px; height: 42px; background: rgba(115, 168, 155, 0.15); border: 1px solid rgba(115, 168, 155, 0.2); color: #1e3935;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+    </svg>
+  </button>
+
+  <div id="menu-dropdown" class="hidden absolute left-0 mt-2 w-48 rounded-2xl bg-white shadow-xl border border-gray-100 p-2 z-50 animate-fade-in" style="direction: rtl;">
+    <a href="#services" class="block px-4 py-2.5 text-sm font-medium rounded-xl transition-colors" style="color: #1e3935; background: transparent;" onmouseover="this.style.background='rgba(115, 168, 155, 0.1)'" onmouseout="this.style.background='transparent'">✂️ השירותים שלנו</a>
+    <a href="#gallery" class="block px-4 py-2.5 text-sm font-medium rounded-xl transition-colors" style="color: #1e3935; background: transparent;" onmouseover="this.style.background='rgba(115, 168, 155, 0.1)'" onmouseout="this.style.background='transparent'">📸 גלריה קטנה</a>
+    <a href="#contact" class="block px-4 py-2.5 text-sm font-medium rounded-xl transition-colors" style="color: #1e3935; background: transparent;" onmouseover="this.style.background='rgba(115, 168, 155, 0.1)'" onmouseout="this.style.background='transparent'">📅 קביעת תור</a>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const btn = document.getElementById('menu-btn');
+    const dropdown = document.getElementById('menu-dropdown');
+    
+    if (btn && dropdown) {
+      // לחיצה על הכפתור פותחת/סוגרת
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        dropdown.classList.toggle('hidden');
+      });
+      
+      // לחיצה בכל מקום אחר במסך סוגרת את התפריט
+      document.addEventListener('click', function() {
+        dropdown.classList.add('hidden');
+      });
+    }
+  })();
+</script>
     </div>
   </div>
 </header>
