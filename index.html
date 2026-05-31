@@ -118,6 +118,40 @@
   }
   </script>
 
+  <!-- Breadcrumb Navigation JSON-LD for SEO -->
+  <script type="application/ld+json">
+  {
+      "@type": "BreadcrumbList",
+      "@context": "https://schema.org",
+      "itemListElement": [
+          {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "דף בית",
+              "item": "https://www.dogran.co.il/"
+          },
+          {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "שירותים",
+              "item": "https://www.dogran.co.il/#services"
+          },
+          {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "ביקורות",
+              "item": "https://www.dogran.co.il/#reviews"
+          },
+          {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "צור קשר",
+              "item": "https://www.dogran.co.il/#contact"
+          }
+      ]
+  }
+  </script>
+
   <style>
     *, *::before, *::after { font-family: 'Rubik', sans-serif; box-sizing: border-box; }
     html  { scroll-behavior: smooth; }
@@ -319,9 +353,8 @@
     .f-input::placeholder { 
       color: #aac2bc; 
     }
-    .f-input.error { 
-      border-color: #e05c5c !important; 
-      box-shadow: 0 0 0 3px rgba(224, 92, 92, 0.14) !important; 
+    .f-input.error {
+      border-color: #e05c5c !important;
     }
     .f-label { 
       display: block; 
@@ -338,6 +371,11 @@
     }
     .f-error.show { 
       display: block; 
+    }
+
+    /* Utility classes */
+    .hidden {
+      display: none !important;
     }
 
     /* Badge pills */
@@ -433,6 +471,42 @@
 
   <!-- FontAwesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Fallback for CDN failures -->
+  <script>
+    // Detect if Tailwind CSS failed to load
+    window.addEventListener('DOMContentLoaded', function() {
+      const testEl = document.createElement('div');
+      testEl.className = 'text-3xl';
+      document.body.appendChild(testEl);
+      const computed = window.getComputedStyle(testEl);
+      document.body.removeChild(testEl);
+
+      if (!computed.fontSize || computed.fontSize === '16px') {
+        // Tailwind failed, apply fallback styles
+        const fallbackCSS = `
+          body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; line-height: 1.5; }
+          .btn { padding: 12px 20px; border-radius: 8px; cursor: pointer; border: none; font-weight: 600; }
+          .card { padding: 20px; border: 1px solid #ddd; border-radius: 12px; margin-bottom: 15px; }
+          input, select, textarea { padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; }
+          .hidden { display: none !important; }
+        `;
+        const style = document.createElement('style');
+        style.textContent = fallbackCSS;
+        document.head.appendChild(style);
+      }
+    });
+
+    // Detect if FontAwesome failed to load
+    if (typeof FontAwesome === 'undefined') {
+      const faStyle = document.createElement('style');
+      faStyle.textContent = `
+        .fa { display: inline-block; width: 1em; height: 1em; }
+        .fa::before { content: '▪'; }
+      `;
+      document.head.appendChild(faStyle);
+    }
+  </script>
 </head>
 
 <body>
@@ -483,9 +557,9 @@
   </button>
 
   <div id="menu-dropdown" class="hidden absolute left-0 mt-2 w-48 rounded-2xl bg-white shadow-xl border border-gray-100 p-2 z-50 animate-fade-in" style="direction: rtl;">
-    <a href="#services" class="block px-4 py-2.5 text-sm font-medium rounded-xl transition-colors" style="color: #1e3935; background: transparent;" onmouseover="this.style.background='rgba(115, 168, 155, 0.1)'" onmouseout="this.style.background='transparent'">✂️ השירותים שלנו</a>
-    <a href="#gallery" class="block px-4 py-2.5 text-sm font-medium rounded-xl transition-colors" style="color: #1e3935; background: transparent;" onmouseover="this.style.background='rgba(115, 168, 155, 0.1)'" onmouseout="this.style.background='transparent'">📸 גלריה קטנה</a>
-    <a href="#contact" class="block px-4 py-2.5 text-sm font-medium rounded-xl transition-colors" style="color: #1e3935; background: transparent;" onmouseover="this.style.background='rgba(115, 168, 155, 0.1)'" onmouseout="this.style.background='transparent'">📅 קביעת תור</a>
+    <a href="#services" class="block px-4 py-2.5 text-sm font-medium rounded-xl transition-colors" style="color: #1e3935; background: transparent;" onmouseover="this.style.background='rgba(115, 168, 155, 0.1)'" onmouseout="this.style.background='transparent'" onclick="document.getElementById('menu-dropdown').classList.add('hidden')">✂️ השירותים שלנו</a>
+    <a href="#gallery" class="block px-4 py-2.5 text-sm font-medium rounded-xl transition-colors" style="color: #1e3935; background: transparent;" onmouseover="this.style.background='rgba(115, 168, 155, 0.1)'" onmouseout="this.style.background='transparent'" onclick="document.getElementById('menu-dropdown').classList.add('hidden')">📸 גלריה קטנה</a>
+    <a href="#contact" class="block px-4 py-2.5 text-sm font-medium rounded-xl transition-colors" style="color: #1e3935; background: transparent;" onmouseover="this.style.background='rgba(115, 168, 155, 0.1)'" onmouseout="this.style.background='transparent'" onclick="document.getElementById('menu-dropdown').classList.add('hidden')">📅 קביעת תור</a>
   </div>
 </div>
 
@@ -543,7 +617,7 @@
 
         <p class="text-base sm:text-lg font-medium leading-relaxed mb-2 max-w-lg mx-auto lg:mx-0" style="color: #5a7a6e;">
           מספרת כלבים וחתולים מקצועית לכל סוגי הגזעים.<br/>
-          <strong style="color: #3c7066;"<strong>רן</strong> – מומחה לכלבים <em>ולחתולים</em>, עם סבלנות אינסופית, יחס חם ואוהב, ו<strong>10+ שנות ניסיון</strong>.
+          <strong style="color: #3c7066;">רן</strong> – מומחה לכלבים <em>ולחתולים</em>, עם סבלנות אינסופית, יחס חם ואוהב, ו<strong>10+ שנות ניסיון</strong>.
         </p>
         <p class="text-sm font-medium mb-8 max-w-lg mx-auto lg:mx-0" style="color: #7a9e96;">
           מחירים הוגנים · מרכז מסחרי שאול המלך 7 · חניה בשפע ובחינם
@@ -994,6 +1068,7 @@
             <div>
               <label class="f-label" for="fnotes">הערות / בקשות מיוחדות</label>
               <textarea id="fnotes" class="f-input resize-none" rows="3" placeholder="ספרו לנו על החיה, גזע, גיל, בקשות מיוחדות..."></textarea>
+              <p class="f-error" id="fnotes-err">נא להשתמש בעברית/אנגלית בלבד עם סימני פיסוק (!, ?, ,, ., -, :, ;, ")</p>
             </div>
             <!-- Submit -->
             <button type="button" onclick="submitToWhatsApp()" class="btn btn-wa btn-full" style="font-size: 15px; padding: 15px;">
@@ -1003,6 +1078,11 @@
             <p class="text-center text-xs font-medium mt-1" style="color: #9ab8b0;">
               לחיצה תפתח WhatsApp עם הפרטים שלכם מוכנים לשליחה
             </p>
+            
+            <!-- Thank You Message -->
+            <div id="thank-you-message" class="hidden mt-4 p-4 rounded-xl text-center" style="background: #f0fdf4; border: 1.5px solid rgba(34,197,94,0.3); color: #15803d; font-weight: 600; font-size: 14px;">
+              תודה רבה! 🎉 פנייתך התקבלה בהצלחה ואנו נחזור אליך בהקדם.
+            </div>
           </div>
         </div>
       </div>
@@ -1126,7 +1206,7 @@
       <!-- Credits -->
       <div class="text-center sm:text-left">
         <div class="text-xs" style="color: #3a5a50;">© 2026 דוג רן. כל הזכויות שמורות.</div>
-        <div class="text-xs mt-0.5" style="color: #3a5a50;">נבנה באהבה על ידי איתמר בירגר🐾</div>
+        <div class="text-xs mt-0.5" style="color: #3a5a50;">נבנה באהבה 🐾</div>
       </div>
     </div>
   </div>
@@ -1168,6 +1248,16 @@
       <span class="text-xs font-semibold" style="color: #7dd3fc;">ניווט</span>
     </a>
 
+    <!-- WhatsApp (center – larger) -->
+    <button onclick="openMobileWhatsApp()"
+       class="flex flex-col items-center gap-1 px-4 py-1.5 rounded-2xl active:scale-95 transition-transform border-0 bg-transparent cursor-pointer"
+       style="background: rgba(37,211,102,0.15);">
+      <div style="width: 52px; height: 52px; border-radius: 16px; background: linear-gradient(135deg, #25d366, #128c4e); box-shadow: 0 4px 18px rgba(37,211,102,0.45); display: flex; align-items: center; justify-content: center;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+      </div>
+      <span class="text-xs font-semibold" style="color: #4ade80;">וואטסאפ</span>
+    </button>
+
   </div>
 </div>
 
@@ -1200,22 +1290,38 @@
     const name = document.getElementById('fname').value.trim();
     const phone = document.getElementById('fphone').value.trim();
     const pet = document.getElementById('fpet').value;
+    const notes = document.getElementById('fnotes').value.trim();
 
     let isValid = true;
 
-    // Validate name
-    if (name.length < 2) {
+    // Validate name: Hebrew + English letters, spaces, apostrophes, and hyphens, at least 2 characters
+    const nameRegex = /^[a-zA-Z\u05D0-\u05EA\s'-]{2,}$/;
+    if (!nameRegex.test(name)) {
       document.getElementById('fname-err').classList.add('show');
       document.getElementById('fname').classList.add('error');
+      document.getElementById('fname-err').textContent = 'נא להזין שם עברי/אנגלי בלבד (לפחות 2 תווים, ללא סימנים)';
       isValid = false;
     } else {
       document.getElementById('fname-err').classList.remove('show');
       document.getElementById('fname').classList.remove('error');
     }
 
-    // Validate phone (Israeli format: 050-8321588 or 0508321588)
-    const phoneRegex = /^05\d{8}$|^05\d-\d{3}-\d{4}$/;
-    if (!phoneRegex.test(phone.replace(/\D/g, '') === phone ? phone : phone.replace(/\D/g, ''))) {
+    // Validate notes: Hebrew + English letters, spaces, and punctuation only (! ? , . - : ; ")
+    if (notes) {
+      const notesRegex = /^[a-zA-Z\u05D0-\u05EA\s!?,.\-:;"]*$/;
+      if (!notesRegex.test(notes)) {
+        document.getElementById('fnotes-err').classList.add('show');
+        document.getElementById('fnotes').classList.add('error');
+        isValid = false;
+      } else {
+        document.getElementById('fnotes-err').classList.remove('show');
+        document.getElementById('fnotes').classList.remove('error');
+      }
+    }
+
+    // Validate phone (Israeli format: 05X-XXXXXXX or 05XXXXXXXXX)
+    const phoneRegex = /^05\d-?\d{7}$/;
+    if (!phoneRegex.test(phone)) {
       document.getElementById('fphone-err').classList.add('show');
       document.getElementById('fphone').classList.add('error');
       isValid = false;
@@ -1237,10 +1343,18 @@
     return isValid;
   }
 
-  // Real-time validation
+  <!-- Real-time validation (only on blur to avoid UX blocking)  -->
   document.getElementById('fname').addEventListener('blur', validateForm);
   document.getElementById('fphone').addEventListener('blur', validateForm);
   document.getElementById('fpet').addEventListener('change', validateForm);
+  document.getElementById('fnotes').addEventListener('blur', validateForm);
+
+  function openMobileWhatsApp() {
+    const businessNumber = '972548321588';
+    const message = `שלום, אשמח לתאם תור למספרת דוג רן! 🐾`;
+    const encodedText = encodeURIComponent(message);
+    window.open(`https://wa.me/${businessNumber}?text=${encodedText}`, '_blank');
+  }
 
   // WhatsApp submission
   function submitToWhatsApp() {
@@ -1261,9 +1375,42 @@
     whatsappText += `🐶 *סוג חיית מחמד:* ${pet}\n`;
     whatsappText += `📝 *הערות/בקשות:* ${notes ? notes : 'ללא הערות מיוחדות'}`;
 
-    const encodedText = encodeURIComponent(whatsappText);
-    window.open(`https://wa.me/${businessNumber}?text=${encodedText}`, '_blank');
+    // Show thank you message
+    const thankYouMsg = document.getElementById('thank-you-message');
+    thankYouMsg.classList.remove('hidden');
+
+    // Reset form fields
+    document.getElementById('fname').value = '';
+    document.getElementById('fphone').value = '';
+    document.getElementById('fpet').value = '';
+    document.getElementById('fnotes').value = '';
+    document.getElementById('fname').classList.remove('error');
+    document.getElementById('fphone').classList.remove('error');
+    document.getElementById('fpet').classList.remove('error');
+    document.getElementById('fnotes').classList.remove('error');
+
+    // Redirect to WhatsApp after 2 seconds
+    setTimeout(() => {
+      thankYouMsg.classList.add('hidden');
+      const encodedText = encodeURIComponent(whatsappText);
+      window.open(`https://wa.me/${businessNumber}?text=${encodedText}`, '_blank');
+    }, 2000);
   }
+
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
 </script>
 
 </body>
