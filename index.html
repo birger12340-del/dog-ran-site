@@ -1068,7 +1068,7 @@
             <div>
               <label class="f-label" for="fnotes">הערות / בקשות מיוחדות</label>
               <textarea id="fnotes" class="f-input resize-none" rows="3" placeholder="ספרו לנו על החיה, גזע, גיל, בקשות מיוחדות..."></textarea>
-              <p class="f-error" id="fnotes-err">נא להשתמש בעברית/אנגלית בלבד עם סימני פיסוק (!, ?, ,, ., -, :, ;, ")</p>
+              <p class="f-error" id="fnotes-err">נא להשתמש באותיות, מספרים וסימני פיסוק בסיסיים בלבד (!, ?, ,, ., -, :, ;, ", ', @, ()).</p>
             </div>
             <!-- Submit -->
             <button type="button" onclick="submitToWhatsApp()" class="btn btn-wa btn-full" style="font-size: 15px; padding: 15px;">
@@ -1296,9 +1296,9 @@
       document.getElementById('fname').classList.remove('error');
     }
 
-    // Validate notes: Hebrew + English letters, spaces, and punctuation only (! ? , . - : ; ")
+    // Validate notes: Hebrew + English letters, numbers, spaces, and punctuation (! ? , . - : ; " ' @ ())
     if (notes) {
-      const notesRegex = /^[a-zA-Z\u05D0-\u05EA\s!?,.\-:;"]*$/;
+      const notesRegex = /^[a-zA-Z\u05D0-\u05EA0-9\s!?,.\-:;"'@()]*$/;
       if (!notesRegex.test(notes)) {
         document.getElementById('fnotes-err').classList.add('show');
         document.getElementById('fnotes').classList.add('error');
